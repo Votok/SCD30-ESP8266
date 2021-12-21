@@ -27,7 +27,7 @@ The project is small and if you have experience, you are done quickly. For other
 ![SCD30 PIN diagram](docs/scd30-diagram.png)
 
 ### Amica NodeMCU ESP8266 WiFi board diagram
-![SCD30 PIN diagram](docs/amicaNodeMcu.jpg)
+![nodeMCU diagram](docs/amicaNodeMcu.jpg)
 
 ### Connect jumper wires
 To be able to connect wires to sensor you may have to do a little soldering first or use breadboard.
@@ -50,14 +50,15 @@ To be able to connect wires to sensor you may have to do a little soldering firs
 
 ## Measurement results
 
+![window ventilation](docs/ventilation.jpg)
 
 ## How it went really
 
 <details><summary>Arduino Uno</summary>
 
-1. Started with Arduino Uno. Found its PIN diagram, connected board to SCD 30 sensor using jump wires.
+1. Started with Arduino Uno. Found its PIN diagram, connected board to SCD30 sensor using jump wires.
 2. Installed PlatformIO IDE as VS Code extension and created *Hello World* project, compiled and deployed to board and voila!
-3. Found an SCD 30 example at Sparkfun blog and started to read and print sensor values.
+3. Found an SCD30 example at Sparkfun blog and started to read and print sensor values.
 4. Realized I have no idea how to store or send the data anywhere :smile:
 </details>
 
