@@ -27,7 +27,7 @@ The project is small and if you have experience, you are done quickly. For other
 ![SCD30 PIN diagram](docs/scd30-diagram.png)
 
 ### Amica NodeMCU ESP8266 WiFi board diagram
-![nodeMCU diagram](docs/amicaNodeMcu.jpg)
+![nodeMCU diagram](docs/amica-NodeMcu.jpg)
 
 ### Connect jumper wires
 To be able to connect wires to sensor you may have to do a little soldering first or use breadboard.
