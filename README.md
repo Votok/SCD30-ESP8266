@@ -38,7 +38,7 @@ To be able to connect wires to sensor you may have to do a little soldering firs
 
 <br />
 
-## What are safe levels of CO and CO2 in rooms?
+## What are safe levels of CO<sub>2</sub> in rooms?
 | CO<sub>2</sub> concentration  |  |
 | ------------- | ------------- |
 | 250-400 ppm| Normal background concentration in outdoor ambient air
