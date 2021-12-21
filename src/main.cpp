@@ -7,7 +7,7 @@
 const char ssid[]     = "xxxxx"; // WiFi SSID
 const char pass[]     = "xxxxx"; // WiFi password
 const char domain[]   = "xxxxx";  // domain.tmep.cz
-const char guid[]     = "CO2"; // mojemereni
+const char guid[]     = "CO2"; // tmep variable
 const byte sleep      = 1; // How often send data to the server. In minutes
  
 SCD30 airSensor;
