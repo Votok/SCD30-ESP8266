@@ -3,8 +3,8 @@
 
 ![project image](docs/project.jpg)
 
-The purpose of the project is to measure the concentration of CO<sub>2</sub> depending on different ways of air ventilation.
-Send and visualize measured data on tmep.cz (Statistics for measured values from IOT devices).
+The purpose of the project is to **measure the concentration of CO<sub>2</sub>** depending on different ways of air ventilation.
+Send and visualize measured data on [tmep.cz](https://tmep.cz/) (Statistics for measured values from IOT devices).
 
 Optionally measure humidity and temperature provided by the sensor.
 
@@ -26,6 +26,9 @@ The project is small and if you have experience, you are done quickly. For other
 ### SCD30 PIN diagram
 ![SCD30 PIN diagram](docs/scd30-diagram.png)
 
+### Amica NodeMCU ESP8266 WiFi board diagram
+![SCD30 PIN diagram](docs/amicaNodeMcu.jpg)
+
 ### Connect jumper wires
 To be able to connect wires to sensor you may have to do a little soldering first or use breadboard.
 1. Red - sensor VDD (power) to board 3V3
@@ -38,11 +41,11 @@ To be able to connect wires to sensor you may have to do a little soldering firs
 ## What are safe levels of CO and CO2 in rooms?
 | CO<sub>2</sub> concentration  |  |
 | ------------- | ------------- |
-| 250-400ppm| Normal background concentration in outdoor ambient air
-| 400-1,000ppm| Concentrations typical of occupied indoor spaces with good air exchange
-| 1,000-2,000ppm | Complaints of drowsiness and poor air.
+| 250-400 ppm| Normal background concentration in outdoor ambient air
+| 400-1,000 ppm| Concentrations typical of occupied indoor spaces with good air exchange
+| 1,000-2,000 ppm | Complaints of drowsiness and poor air.
 | 2,000-5,000 ppm| Headaches, sleepiness and stagnant, stale, stuffy air. Poor concentration, loss of attention, increased heart rate and slight nausea may also be present.
-| 5,000| Workplace exposure limit (as 8-hour TWA) in most jurisdictions.
+| 5,000 ppm| Workplace exposure limit (as 8-hour TWA) in most jurisdictions.
 | >40,000 ppm| Exposure may lead to serious oxygen deprivation resulting in permanent brain damage, coma, even death.
 
 ## Measurement results
@@ -55,7 +58,7 @@ To be able to connect wires to sensor you may have to do a little soldering firs
 1. Started with Arduino Uno. Found its PIN diagram, connected board to SCD 30 sensor using jump wires.
 2. Installed PlatformIO IDE as VS Code extension and created *Hello World* project, compiled and deployed to board and voila!
 3. Found an SCD 30 example at Sparkfun blog and started to read and print sensor values.
-4. Realized I have no idea how to store or send the data anywhere :smiling:
+4. Realized I have no idea how to store or send the data anywhere :smile:
 </details>
 
 <details><summary>Let's try NodeMCU ESP8266 WiFi board</summary>
@@ -72,7 +75,7 @@ To be able to connect wires to sensor you may have to do a little soldering firs
 
 1. New project, new PIN diagram, reconnected wires and bam, printing to COM failed again. None of the provided USB drivers worked. The COM port would not start at all.
 2. Went to MacBook Air, installed all and eventually was able to print data to terminal.
-3. But also found my WiFi router had problem with GET to tmep.cz. Other urls worked just fine :) So I tried to use mobile hotspot instead and sent requests to tmep.cz successfully.
+3. But also found my WiFi router had problem with GET to tmep.cz. Other urls worked just fine :raised_eyebrow: So I tried to use mobile hotspot instead and sent requests to tmep.cz successfully.
 </details>
 
 <details><summary>Back to NodeMCU ESP8266 :wink:</summary>
