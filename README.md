@@ -1,4 +1,4 @@
-# See how window replacement and morning headaches are related
+# See how window replacement and morning headaches can be related
 *If you open the door to your child's room in the morning, you may be surprised at how it is possible to survive a night without air. Especially if you have small rooms and new great sealing windows…*
 
 ![project image](docs/project.jpg)
@@ -6,7 +6,6 @@
 The purpose of the project is to **measure the concentration of CO<sub>2</sub>** depending on different ways of air ventilation.
 Send and visualize measured data on [tmep.cz](https://tmep.cz/) (Statistics for measured values from IOT devices).
 
-Optionally measure humidity and temperature provided by the sensor.
 
 The project is small and if you have experience, you are done quickly. For others like me, this brings new insights and can be a good start for IOT prototyping. [See lessons learned](#how-it-went-really).
 
@@ -48,9 +47,23 @@ To be able to connect wires to sensor you may have to do a little soldering firs
 | 5,000 ppm| Workplace exposure limit (as 8-hour TWA) in most jurisdictions.
 | >40,000 ppm| Exposure may lead to serious oxygen deprivation resulting in permanent brain damage, coma, even death.
 
-## Measurement results
-
+## Window microventilation
 ![window ventilation](docs/ventilation.jpg)
+
+## Measurement results
+Measured during the night, window was set to microventilation and the interior door was closed. The area of the room is approximately 25 m<sup>2</sup>.
+
+![measurement result](docs/result.jpg)
+
+The measurement shows the microventilation mode with the interior door closed did not ensure sufficient air exchange in my bedroom.
+
+The supply of fresh air only through microventilation is insufficient, and subjectively, even when the door is open, one can have poor quality sleep and morning fatigue.
+
+It seems it is either necessary to ventilate during the night or at least leave the door open.
+
+## The future of the project
+The sensor also allows you to measure humidity and temperature. I would like to add a display that will show all three data. Also print the box on the 3D printer and possibly run on battery power.
+<br />
 
 ## How it went really
 

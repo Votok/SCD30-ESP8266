@@ -14,19 +14,6 @@ SCD30 airSensor;
 const u_int16_t measurementInterval = 30;
 
 void setParameters() {
-// unsigned int altitudeOrig = airSensor.getAltitudeCompensation();
-  // Serial.print("Original altitude: ");
-  // Serial.print(altitudeOrig);
-  // Serial.println("m");
-
-  // //My desk is ~300 above sealevel
-  // airSensor.setAltitudeCompensation(300); //Set altitude of the sensor in m, stored in non-volatile memory of SCD30
-
-  // //Read altitude compensation value
-  // unsigned int altitude = airSensor.getAltitudeCompensation();
-  // Serial.print("Current altitude: ");
-  // Serial.print(altitude);
-  // Serial.println("m");
 
  //Change number of seconds between measurements: 2 to 1800 (30 minutes), stored in non-volatile memory of SCD30
   airSensor.setMeasurementInterval(measurementInterval);
@@ -124,15 +111,12 @@ void sendData(uint16_t co2Value) {
 }
 
 void setup() {
-  //pinMode(2, OUTPUT); // GPIO2, LED on ESP8266
  
   // Start serial
   Serial.begin(115200);
   delay(1000);
   Serial.println();
 
-  // Serial.setDebugOutput(true); 
-  Serial.println("SCD30 Example");
   Wire.begin();
 
   if (airSensor.begin() == false)
