@@ -4,10 +4,10 @@
 #include <ESP8266WiFi.h>       // WiFi library
  
 // Define settings
-const char ssid[]     = "xxxxx"; // WiFi SSID
-const char pass[]     = "xxxxx"; // WiFi password
-const char domain[]   = "xxxxx";  // domain.tmep.cz
-const char guid[]     = "CO2"; // tmep variable
+const char ssid[]     = ""; // WiFi SSID
+const char pass[]     = ""; // WiFi password
+const char domain[]   = "xxx.tmep.cz";  // domain.tmep.cz
+const char guid[]     = "mereni"; // tmep variable
 const byte sleep      = 1; // How often send data to the server. In minutes
  
 SCD30 airSensor;
@@ -71,7 +71,7 @@ void setParameters() {
   }
 }
 
-void sendData(uint16_t co2Value) {
+void sendData(uint16_t co2Value, uint16_t teplota, uint16_t vlhkost) {
   WiFiClient client;
 
   char host[50];            // Joining two chars is little bit difficult. Make new array, 50 bytes long
@@ -90,7 +90,12 @@ void sendData(uint16_t co2Value) {
   String url = "/?";
         url += guid;
         url += "=";
+        url += teplota;
+        url += "&humV=";
+        url += vlhkost;
+        url += "&CO2=";
         url += co2Value;
+
   Serial.print(F("Requesting URL: ")); Serial.println(url);
 
   // Make a HTTP GETrequest.
@@ -153,14 +158,16 @@ void loop() {
     Serial.print(co2Value);
 
     Serial.print(" temp(C):");
-    Serial.print(airSensor.getTemperature(), 1);
+    uint16_t teplota = airSensor.getTemperature();
+    Serial.print(teplota, 1);
 
     Serial.print(" humidity(%):");
-    Serial.print(airSensor.getHumidity(), 1);
+    uint16_t vlhkost = airSensor.getHumidity();
+    Serial.print(vlhkost, 1);
 
     Serial.print(" ");
 
-    sendData(co2Value);
+    sendData(co2Value, teplota, vlhkost);
   }
   
   delay(sleep*60000);
